@@ -1,0 +1,15 @@
+body{
+    padding: 0px;
+    margin: 0px;
+}
+.prediction{
+    margin: 5vh auto;
+    border: none;
+    width: fit-content;
+    padding: 3vh 20vh; 
+    border-radius: 10px;
+    box-shadow: -10px 10px 30px rgba(166, 0, 255, 0.433);
+}
+.prediction h1{
+    margin: 0px;
+}

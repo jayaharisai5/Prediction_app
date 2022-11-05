@@ -1,0 +1,31 @@
+{% include 'navbar.html' %}
+<link rel="stylesheet" href="../static/index.css">
+<div class="prediction">
+    <h1>Prediction</h1>
+    <form action="/" method="post">
+        <table class="table">
+            <tr>
+                <th>Title</th>
+                <th>Inputs</th>
+            </tr>
+            {% for col in range(length) %}
+            <tr>
+                <td>{{pickle_file_columns[col]}}</td>
+                <td>
+                <select class="select" name="{{col}}" id="">
+                    {% for val in raw_data_unique_values[col] %}
+                    <option value="{{val}}">{{val}}</option>
+                    {% endfor %}
+                </select>
+                </td>
+            </tr>
+            {% endfor %}
+        </table>
+        <input class="submit" type="submit" name="action1" value="Submit" id="">
+    </form>
+    {% if condition %}
+    <div class="result">
+        Result : <span class="rrr">{{predicted_results}}</span>
+    </div>
+    {% endif %}
+</div>
